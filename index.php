@@ -21,8 +21,8 @@
 			echo date("Y m d");
 		?>
 		<p>
-			<a href="/php/login.php">Login</a>
-			<a href="/php/register.php">Register</a>
+			<a href="/simple-login-system/login.php">Login</a>
+			<a href="/simple-login-system/register.php">Register</a>
 		</p>
 	</div>
 	<?php require_once "inc/footer.php"; ?>
