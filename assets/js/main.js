@@ -14,8 +14,33 @@ $(document)
 		error.text("Password must be at least 11 characters").show();
 		return false;
 	}
-	
+
 	error.hide();
 
+	$.ajax({
+		type: 'POST',
+		url: '/ajax/register.php',
+		data: data,
+		dataType: 'json',
+		asyn: true,
+	})
+	.done(function ajaxDone(data){
+		console.log(data);
+		if (data.redirect !== undefined){
+			alert('youre good');
+			// window.location = data.redirect;
+		}else if (data.error !== undefined){
+			error.text(data.error).show();
+		}
+
+	})
+	.fail(function ajaxFailed(e){
+		console.log(e);
+
+	})
+	.always(function ajaxAlways(data){
+		console.log(data);
+
+	})
 	return false;
 })
