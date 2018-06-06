@@ -3,6 +3,7 @@ $(document)
 	event.preventDefault();
 	var form = $(this);
 	var error = $(".js-error", form);
+
 	var data = {
 		email: $("input[type='email']", form).val(), 
 		password: $("input[type='password']", form).val()
@@ -19,7 +20,7 @@ $(document)
 
 	$.ajax({
 		type: 'POST',
-		url: '/ajax/register.php',
+		url: 'ajax/register.php',
 		data: data,
 		dataType: 'json',
 		asyn: true,

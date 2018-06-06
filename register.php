@@ -34,7 +34,7 @@
 						<input class="uk-input" type="password" id="form-stacked-text" required="required" placeholder="Enter password here">
 					</div>
 				</div>
-				<div class="uk-margin uk-alert uk-alert-danger js-error"></div>
+				<div class="uk-margin uk-alert uk-alert-danger js-error" style="display: none;"></div>
 
 				<div class="uk-margin">
 					<button class="uk-button uk-button-default" type="submit">Register</button>
