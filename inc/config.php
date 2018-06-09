@@ -4,6 +4,10 @@
 		//should redirect to error page rather than exiting
 	}
 
+	if(!isset($_SESSION)){
+		session_start();
+	}
+
 	//Include the DB.php file
 	include_once "classes/DB.php";
 	include_once "classes/Filter.php";

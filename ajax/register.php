@@ -30,7 +30,7 @@
 
 				$_SESSION['user_id'] = (int) $user_id;
 
-				$array['redirect'] = '/simple-login-system/dashboard.php';
+				$array['redirect'] = '/simple-login-system/dashboard.php?message=welcome';
 			}
 
 
