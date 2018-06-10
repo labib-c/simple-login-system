@@ -28,8 +28,7 @@ $(document)
 	.done(function ajaxDone(data){
 		console.log(data);
 		if (data.redirect !== undefined){
-			alert('youre good');
-			// window.location = data.redirect;
+			window.location = data.redirect;
 		}else if (data.error !== undefined){
 			error.text(data.error).show();
 		}
@@ -46,7 +45,7 @@ $(document)
 	return false;
 })
 
-//login
+//TODO optimize code -> remove reptitions
 .on("submit", "form.js-login", function(event){
 	event.preventDefault();
 	var form = $(this);
@@ -77,7 +76,7 @@ $(document)
 		console.log(data);
 		if (data.redirect !== undefined){
 			alert('logged in');
-			// window.location = data.redirect;
+			window.location = data.redirect;
 		}else if (data.error !== undefined){
 			error.html(data.error).show();
 		}

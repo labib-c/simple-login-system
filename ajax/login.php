@@ -21,7 +21,7 @@
 				$user_id = (int) $User['user_id'];
 				$hash = $User['password'];
 				if(password_verify($password, $hash)){
-					$array['redirect'] = '/simple-login-system/index.php?message=welcome';
+					$array['redirect'] = '/simple-login-system/dashboard.php';
 					$_SESSION['user_id'] = $user_id;
 				}else{
 					$array['error'] = "Incorrect password or email";
