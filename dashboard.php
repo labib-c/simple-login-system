@@ -3,6 +3,7 @@
 	require_once "inc/config.php"; 
 
 	force_login();
+	$User = new User($_SESSION['user_id']);
 ?>
 
 <!DOCTYPE html>
@@ -23,7 +24,9 @@
 
   	<div class="uk-section uk-container">
   		<h2>Dashboard</h2>
-<!--       <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p> -->
+  		You are signed in as user: <?php echo $_SESSION['user_id']?>
+      <p>Hello <?php echo $User->email; ?>, you registered at <?php echo $User->reg_time; ?></p>
+      <a href="/simple-login-system/logout.php"> Logout </a>
   	</div>
 
   	<?php require_once "inc/footer.php"; ?> 

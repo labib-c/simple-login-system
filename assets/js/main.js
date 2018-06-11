@@ -75,7 +75,6 @@ $(document)
 	.done(function ajaxDone(data){
 		console.log(data);
 		if (data.redirect !== undefined){
-			alert('logged in');
 			window.location = data.redirect;
 		}else if (data.error !== undefined){
 			error.html(data.error).show();
